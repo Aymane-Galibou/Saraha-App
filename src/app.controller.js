@@ -30,6 +30,11 @@ export const bootstrap = async (express, app) => {
   app.use(express.json());
 
   //handling Routes
+
+  app.get("/",(req,res)=>{
+
+    res.send({status:true,messageStatus:"welcome to Saraha App , this Service developped by Aymane GAlibou"})
+  })
   app.use("/users", userRouter);
   app.use("/messages", messageRouter);
 
